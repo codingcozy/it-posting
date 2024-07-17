@@ -35,7 +35,7 @@ image.save("ddpm_generated_image.png")
 
 <div class="content-ad"></div>
 
-```MD
+```js
 ![Exploring HuggingFace Unconditional Image Generation](/assets/img/2024-06-22-ExploringHuggingFaceUnconditionalImageGeneration_1.png)
 
 import tensorflow as tf

@@ -154,7 +154,7 @@ brew update && brew upgrade apple/apple/game-porting-toolkit
 
 <div class="content-ad"></div>
 
-```sh
+```js
 cp /Volumes/Game\ Porting\ Toolkit*/gameportingtoolkit* /usr/local/bin
 ```
 
@@ -162,7 +162,7 @@ cp /Volumes/Game\ Porting\ Toolkit*/gameportingtoolkit* /usr/local/bin
 
 와인 프리픽스는 크로스오버의 병(Bottle)과 유사한 가상 C: 드라이브를 포함하고 있어요. 툴킷과 게임을 이 가상 C: 드라이브에 설치할 거예요. 다음 명령어를 실행하여 홈 디렉터리에 my-game-prefix라는 새로운 와인 프리픽스를 생성하세요. 이 명령어는 my-game-prefix라는 와인 프리픽스를 만들지만 다른 이름으로 변경할 수도 있어요.
 
-```sh
+```js
 WINEPREFIX=~/my-game-prefix $(brew --prefix game-porting-toolkit)/bin/wine64 winecfg
 ```
 

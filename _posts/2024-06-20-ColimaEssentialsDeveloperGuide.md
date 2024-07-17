@@ -130,7 +130,7 @@ $ ls -l /usr/local/bin/docker-credential-osxkeychain
 
 도커 컴포즈가 올바르게 구성되도록 하려면 다음 명령어를 사용하여 cli-plugin 폴더를 만들어주십시오:
 
-```sh
+```js
 $ mkdir -p $HOME/.docker/cli-plugins
 $ ln -sfn /usr/local/opt/docker-compose/bin/docker-compose $HOME/.docker/cli-plugins/docker-compose
 ```
@@ -147,7 +147,7 @@ Colima가 성공적으로 설치되고 구성되었는지 확인하려면 다음
 
 <div class="content-ad"></div>
 
-```sh
+```js
 $ colima start; colima status
 $ docker version
 $ docker login

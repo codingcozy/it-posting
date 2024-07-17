@@ -188,13 +188,13 @@ sudo usermod -aG docker $USER
 
 도커 서비스를 실행하세요.
 
-```sh
+```js
 sudo service docker start
 ```
 
 상태를 확인하세요. ("docker is running"이어야 함)
 
-```sh
+```js
 sudo service docker status
 ```
 

@@ -204,13 +204,13 @@ containerd config default | sudo tee /etc/containerd/config.toml >/dev/null 2>&1
 
 <div class="content-ad"></div>
 
-```sh
+```js
 sudo nano /etc/containerd/config.toml
 ```
 
 아래와 같이 변경해주세요.
 
-```sh
+```js
 ‘SystemdCgroup = false’
 ```
 
@@ -301,7 +301,7 @@ kind: KubeletConfiguration
 
 <div class="content-ad"></div>
 
-```sh
+```js
 sudo kubeadm init --config kubelet.yaml
 ```
 

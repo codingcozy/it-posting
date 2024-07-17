@@ -162,7 +162,7 @@ predictor.predict(input_data)
 
 이제 우리는 이 데모를 위해 동일한 데이터포인트를 가진 가짜 데이터 집합을 만들어 S3로 옮기겠습니다. 다음 코드는 입력 파일을 포함하는 로컬 디렉터리를 생성합니다:
 
-```py
+```js
 import json
 import os
 

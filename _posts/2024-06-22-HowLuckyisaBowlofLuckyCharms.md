@@ -93,7 +93,7 @@ tl;dr 버전: 학생 팀이 럭키참스 시리얼 그릇이 박스 전체에 �
 
 여기 R 코드로 데이터 세트의 상위 부분(첫 6행)을 읽고 표시하는 방법이 있습니다. 이 데이터 및 모든 코드는 이 GitHub 저장소에서 공유됩니다.
 
-```R
+```js
 library(readxl)
 Lucky <- read_excel("Lucky.xlsx")
 Lucky$Box <- as.factor(Lucky$Box)
@@ -277,7 +277,7 @@ p2 + geom_smooth(method = "lm", aes(group=1), colour="black")
 
 <div class="content-ad"></div>
 
-```r
+```js
 library(ggpubr)
 ggarrange(p1 + geom_smooth(method = "lm", aes(group=1), colour="black"),
           p2 + geom_smooth(method = "lm", aes(group=1), colour="black"),
@@ -289,7 +289,7 @@ ggarrange(p1 + geom_smooth(method = "lm", aes(group=1), colour="black"),
 
 이제 재미있는 부분으로 넘어가 봅시다: Totcharms ~ Bowl 및 Totcharms ~ Weight 관계를 개별적으로 탐색해 보았지만, 이들을 함께 넣으면 어떻게 될까요? 알아보죠:
 
-```r
+```js
 mod3 <- lm(Totcharms ~ Bowl + Weight, data = Lucky)
 summary(mod3)
 ```

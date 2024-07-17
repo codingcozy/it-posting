@@ -96,7 +96,7 @@ SHA256:/hk7MJ5n5aiqdfTVUZr+2Qt+qCiS7BIm5Iv0dxrc3ks user@host
 
 <div class="content-ad"></div>
 
-```sh
+```js
 cat ~/.ssh/id_rsa.pub
 ```
 
@@ -104,7 +104,7 @@ cat ~/.ssh/id_rsa.pub
 
 서버에 암호 액세스 권한이 있고 SSH가 이미 설치되어 있는 경우, 우리의 공개 키 내용을 복사하여 authorized_keys 파일에 붙여넣을 수 있습니다. 이렇게 하면 권한 없는 키를 가진 사람들이 서버에 액세스하는 것을 방지할 수 있습니다. 아래 간단한 bash 명령어로 이 모든 작업을 수행할 수 있습니다:
 
-```sh
+```js
 ssh-copy-id user@remote_server
 ```  
 

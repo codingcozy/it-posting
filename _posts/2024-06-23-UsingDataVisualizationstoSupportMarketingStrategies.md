@@ -31,7 +31,7 @@ link: "https://medium.com/@datageek22/using-data-visualizations-to-support-marke
 
 <div class="content-ad"></div>
 
-```R
+```js
 hotel_bookings <- read.csv("hotel_bookings.csv")
 ```
 
@@ -45,7 +45,7 @@ ggplot2를 사용하려면 tidyverse 패키지를 설치하고 로드해야 했�
 <div class="content-ad"></div>
 
 
-``` r
+```js
 install.packages("tidyverse")
 library(tidyverse)
 ```
@@ -120,7 +120,7 @@ ggplot (data = hotel_bookings) + geom_point (mapping = aes (x = lead_time, y = c
 
 <div class="content-ad"></div>
 
-```r
+```js
 onlineta_city_hotels <- hotel_bookings %>%
 filter(hotel == "City Hotel" & market_segment == "Online TA")
 ```
@@ -129,7 +129,7 @@ filter(hotel == "City Hotel" & market_segment == "Online TA")
 
 코드:
 
-```r
+```js
 ggplot(data = onlineta_city_hotels) + geom_point(mapping = aes(x = lead_time, y = children))
 ```
 

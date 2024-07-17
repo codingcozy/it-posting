@@ -157,7 +157,7 @@ docker swarm join --token YOUR_TOKEN YOUR_IP_PORT
 
 아래는 Alpine 컨테이너에 neofetch를 설치하는 방법입니다. Alpine의 커뮤니티 저장소를 활성화해야 합니다.
 
-```sh
+```js
 echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories
 apk update
 apk add neofetch
@@ -165,7 +165,7 @@ apk add neofetch
 
 기존 컨테이너를 중지하고 제거하는 방법은 다음과 같습니다.
 
-```sh
+```js
 sudo docker ps -a
 sudo docker stop worker1 worker2
 sudo docker rm worker1 worker2

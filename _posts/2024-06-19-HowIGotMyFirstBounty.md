@@ -45,7 +45,7 @@ https://ex.service.example.com/history?selectedSources=someSources'' > 200
 
 <div class="content-ad"></div>
 
-```plaintext
+```js
 그 후에는 데이터베이스 버전을 추출하기 위해 sqlmap을 실행해 보았지만, 불행히도 sqlmap은 PostgreSQL이 DBMS임을 제외하고는 아무것도 추출하지 못했습니다. 그러나 포기하지 않고 대신 ghauri(https://github.com/r0oth3x49/ghauri.git)를 사용해 보았어요!
 
 ghauri -u "https://ex.service.example.com/history?selectedSources=someSources" --dbms=postgres --cookie="JSESSIONID=09326D266052B6B0F7E391B7BBD3A284" --dbs

@@ -51,7 +51,7 @@ find . -name "checkpoint-*" | wc -l
 
 <div class="content-ad"></div>
 
-```sh
+```js
 find . -name "checkpoint-*" | \
   xargs -I {} du --bytes {} | \
   awk '{ print; total += $1 }; END { print "Total: " total/1024/1024/1024 " GB" }'

@@ -51,14 +51,14 @@ library(viridis)
 
 날짜는 제가 가장 좋아하는 변수입니다. 하나의 날짜 열은 많은 정보를 담고 있어요. 이 시나리오에서는 판매와의 관계를 탐색하기 위해 날짜 열에서 새로운 특징들을 만들 거에요. 하지만 먼저, 날짜 열을 문자열로만 사용하는 것보다는 as.Date()를 사용하여 정리할 거에요.
 
-```r
+```js
 data <- data %>%
   mutate(date = as.Date(date, format = "%m/%d/%Y"))
 ```
 
 다음으로 회귀 분석을 위해 이 날짜 열에서 새로운 특징들을 만들 거에요. Lubridate 패키지는 이 작업을 간단하게 만들어 주는 편리한 함수들로 구성돼 있어요.
 
-```r
+```js
 # 시간과 관련된 요소를 포함하기 위해 데이터 전처리
 df <- data %>%
   mutate(
@@ -139,7 +139,7 @@ df |>
 
 tidymodels에서 제공하는 initial_time_split() 함수를 사용하여 데이터를 학습 및 테스트 세트로 나누겠습니다.
 
-```R
+```js
 df_split <- df |> 
   initial_time_split(prop=0.9)  # 90% 데이터를 학습에, 10%를 테스트에 할당
 
@@ -155,7 +155,7 @@ df_test <- testing(df_split)
 
 교차 검증은 입력 데이터의 하위 집합에서 모델을 학습시키고 나머지 데이터에서 평가하여 모델을 평가하는 데 사용할 수 있습니다. 일반적인 교차 검증 방법은 데이터 포인트를 무작위로 선택하여 학습 데이터 집합에 할당합니다. 그러나 이 방법은 데이터가 순차적이어야하기 때문에 시계열에 적합하지 않습니다. Timetk 패키지에는 시계열 데이터 세트에 대한 교차 검증 폴드를 특별히 생성하고 해당 분할을 시각화하는 데 사용할 수있는 멋진 함수인 time_series_cv()가 있습니다.
 
-```R
+```js
 # 교차 검증 분할 생성
 df_folds <- 
   time_series_cv(
@@ -288,7 +288,7 @@ autoplot(df_results)
 
 이제 df_results의 결과를 순위 매겨 가장 낮은 RMSE를 기준으로 가장 성능이 좋은 모델을 식별하겠습니다. 해당 모델의 ID 및 매개변수를 검색하고 이 최적화된 모델을 훈련 데이터에 맞출 것입니다. 그런 다음, 이 모델을 사용하여 테스트 데이터셋에서 판단하고 새로운 지표를 확인하겠습니다.
 
-```r
+```js
 # 최고의 rmse를 가진 workflow의 ID 가져오기
 best_workflow_id <- df_results %>%
   rank_results(rank_metric = "rmse") %>%
@@ -318,7 +318,7 @@ finalized_workflow
 
 이제 이 워크플로우를 사용하여 fit() 및 augment()를 사용하여 테스트 데이터 세트에서 예측하겠습니다. 이 예측을 기반으로 지표를 측정할 것입니다.
 
-```R
+```js
 predictions <- finalized_workflow %>%
   fit(df_train) %>%
   augment(df_test)  

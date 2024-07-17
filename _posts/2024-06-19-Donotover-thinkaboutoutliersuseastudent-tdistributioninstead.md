@@ -39,7 +39,7 @@ link: "https://medium.com/towards-data-science/do-not-over-think-about-outliers-
 
 <div class="content-ad"></div>
 
-```r
+```js
 library(ggplot2)
 library(brms)
 library(ggdist)
@@ -60,7 +60,7 @@ library(ghibli)
 
 데이터 처리를 고려하면 저희의 모델링 전략은 유전형과 일자를 Trial3의 분포의 범주형 예측변수로 사용할 것입니다.
 
-```R
+```js
 data <- read.csv("Data/Rotarod.csv")
 data$Day <- factor(data$Day, levels = c("1", "2"))
 data$Genotype <- factor(data$Genotype, levels = c("WT", "KO"))
@@ -73,7 +73,7 @@ Guilherme A. Franchi, 박사의 훌륭한 블로그 게시물에서 소개된 Ra
 
 <div class="content-ad"></div>
 
-```R
+```js
 edv <- ggplot(data, aes(x = Day, y = Trial3, fill=Genotype)) +
   scale_fill_ghibli_d("SpiritedMedium", direction = -1) +
   geom_boxplot(width = 0.1,
@@ -121,7 +121,7 @@ Figure 2은 Guilherme A. Franchi, 박사의 원본과 다릅니다. 왜냐하면
 
 <div class="content-ad"></div>
 
-```r
+```js
 Gaussian_Fit1 <- brm(Trial3 ~ Day * Genotype, 
            data = data, 
            family = gaussian(),
@@ -141,7 +141,7 @@ Gaussian_Fit1 <-
 
 계속하기 전에 실제 관측값과 모델의 예측을 비교하기 위해 몇 가지 간단한 모델 진단을 하는 것이 좋습니다. 이를 다양한 방법으로 수행할 수 있지만, 가장 흔한 방법은 전체 밀도를 그래픽으로 나타내는 것입니다. brms의 pp_check 함수를 사용하여 이를 달성할 수 있습니다.
 
-```r
+```js
 set.seed(8807)
 
 pp_check(Gaussian_Fit1, ndraws = 100) +
@@ -172,7 +172,7 @@ describe_posterior(Gaussian_Fit1,
 
 <div class="content-ad"></div>
 
-```R
+```js
 # Convex hull을 위한 그래프를 생성합니다
 Gaussian_CondEffects <- 
   conditional_effects(Gaussian_Fit1)

@@ -127,7 +127,7 @@ cd stable-diffusion-webui
 
 <div class="content-ad"></div>
 
-```sh
+```js
 ./webui.sh
 ```
 
@@ -157,7 +157,7 @@ Mac에서 Stable Diffusion 웹 UI를 업데이트하려면 GitHub 저장소 AUTO
 
 2. 원래 복제된 저장소가 있는 디렉토리로 이동합니다. `cd` 명령을 사용하여 디렉토리를 변경할 수 있습니다. 예를 들어 "stable-diffusion-webui" 폴더로 이동하려면 다음 명령을 사용하세요:
 
-```sh
+```js
 cd stable-diffusion-webui
 ```
 

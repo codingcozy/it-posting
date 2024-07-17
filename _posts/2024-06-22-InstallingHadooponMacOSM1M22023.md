@@ -53,7 +53,7 @@ core-site.xml
 
 hdfs-site.xml
 
-```xml
+```js
 <구성>
    <속성>
       <이름>dfs.replication</이름>
@@ -64,7 +64,7 @@ hdfs-site.xml
 
 mapred-site.xml
 
-```xml
+```js
 <구성>
   <속성>
     <이름>yarn.app.mapreduce.am.env</이름>
@@ -85,7 +85,7 @@ mapred-site.xml
 
 yarn-site.xml
 
-```xml
+```js
 <configuration>
    <property>
       <name>yarn.nodemanager.aux-services</name>
@@ -96,7 +96,7 @@ yarn-site.xml
 
 hadoop-env.sh
 
-```sh
+```js
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
 ```
 

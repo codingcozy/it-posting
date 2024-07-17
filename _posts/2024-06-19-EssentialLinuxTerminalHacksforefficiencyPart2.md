@@ -38,7 +38,7 @@ link: "https://medium.com/faun/essential-linux-terminal-hacks-for-efficiency-par
 
 To view the date and time in the command history, use HISTTIMEFORMAT and select how you want the date to be displayed.
 
-```sh
+```js
 HISTTIMEFORMAT="%d-%m-%y %r" history
 
 %d - Day
@@ -95,7 +95,7 @@ column 명령어를 사용하여 텍스트 파일이나 명령어 출력을 더 
 
 <div class="content-ad"></div>
 
-```sh
+```js
 # -t 옵션을 사용하여 표 형식으로 보여줍니다. -s 옵션은 구분자를 지정합니다. column 명령어로 실행하거나 다른 명령어의 출력을 column으로 파이핑하세요.
 
 column -s ',' -t data.csv # 파일로부터 구분된 값으로 표시

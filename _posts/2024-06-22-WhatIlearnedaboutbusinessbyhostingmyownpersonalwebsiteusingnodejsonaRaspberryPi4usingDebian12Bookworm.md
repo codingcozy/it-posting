@@ -425,7 +425,7 @@ sudo nano /etc/fail2ban/jail.local
 
 <div class="content-ad"></div>
 
-```ini
+```js
 [nginx-req-limit]
 
 enabled = true
@@ -441,7 +441,7 @@ Nginx 구성 파일 편집
 
 우리는 다음을 삽입합니다.
 
-```sh
+```js
 sudo nano /etc/nginx/nginx.conf
 ```
 
@@ -561,7 +561,7 @@ sudo nano /etc/systemd/system/cerbot.service
 
 그리고 아래의 작업을 추가해 주세요.
 
-```sh
+```js
 #!/bin/sh
 
 certbot renew
@@ -570,7 +570,7 @@ systemctl restart nginx
 
 그리고 아래의 명령어를 실행해 주세요.
 
-```sh
+```js
 sudo systemctl enable certbot.service && sudo systemctl start certbot.service && sudo systemctl status cerbot.service
 ```
 

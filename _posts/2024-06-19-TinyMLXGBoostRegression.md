@@ -549,7 +549,7 @@ void loop() {
 
 <div class="content-ad"></div>
 
-```plaintext
+```js
 코드: bc1qzydjy4m9yhmjjrkgtrzhsgmkq79qenvcvc7qzn
 
 ![Image](/assets/img/2024-06-19-TinyMLXGBoostRegression_37.png)

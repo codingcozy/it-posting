@@ -191,7 +191,7 @@ const nodemailer = require("nodemailer");
 
 - "report.ts"라는 Deno 스크립트 파일을 만들어보세요:
 
-```ts
+```js
 import { generateReport } from "./reportGenerator.ts";
 
 // 보고서 생성 후 파일로 저장
@@ -265,7 +265,7 @@ crontab - l;
 
 <div class="content-ad"></div>
 
-``` operator는 출력을 지정된 로그 파일에 추가하고, 2`&1을 사용하여 표준 출력(stdout)과 표준 오류(stderr)를 모두 캡처합니다.
+```js
 
 크론 작업이 출력을 로깅하도록 설정되면, 이러한 로그 파일을 확인하여 작업에 의해 생성된 결과 및 오류 메시지를 확인할 수 있습니다.
 

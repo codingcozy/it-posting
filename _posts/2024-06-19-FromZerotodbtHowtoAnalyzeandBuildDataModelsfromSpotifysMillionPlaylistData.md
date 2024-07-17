@@ -99,7 +99,7 @@ Spotify의 1000개 raw 데이터 파일로 되돌아가보죠. 모든 데이터 
 
 DuckDB와 jq는 모두 JSON 데이터와 상호 작용하기 위한 훌륭한 도구입니다. 이 멋진 도구들을 설치하려면 선호하는 패키지 관리자를 사용하십시오. 예를 들어:
 
-```sh
+```js
 $ brew install duckdb
 $ brew install jq
 ```

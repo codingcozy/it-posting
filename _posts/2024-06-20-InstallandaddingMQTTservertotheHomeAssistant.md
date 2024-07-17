@@ -84,7 +84,7 @@ sudo systemctl restart mosquitto
 
 만약 라즈베리 파이 밖에서 MQTT를 사용하여 LAN 또는 인터넷에서 IoT 장치를 설정하려는 경우, Mosquitto 브로커가 아웃바운드 연결 요청을 수신하도록 설정해야 합니다:
 
-```sh
+```js
 echo -e "listener 1883" | sudo tee -a sudo nano /etc/mosquitto/mosquitto.conf
 ```
 

@@ -317,7 +317,7 @@ dsquery * -filter “(&(memberof=CN=Staff,DC=PLANETEXPRESS,DC=LOCAl)(memberof=CN
 
 ![image](/assets/img/2024-06-20-AnIntroductiontoManualActiveDirectoryQueryingwithDsqueryandLdapsearch_19.png)
 
-```plaintext
+```js
 ldapsearch -LLL -x -h DC-THESHIP.PLANETEXPRESS.LOCAL -p 389 -D ‘PLANETEXPRESS\SService’ -w ‘L1feD3@thSeamlessContinuum’ -b ‘DC=PLANETEXPRESS,DC=LOCAL’ “(&(memberof=CN=Staff,DC=PLANETEXPRESS,DC=LOCAl)(memberof=CN=ShipCrew,DC=PLANETEXPRESS,DC=LOCAL))” name memberof
 ```
 

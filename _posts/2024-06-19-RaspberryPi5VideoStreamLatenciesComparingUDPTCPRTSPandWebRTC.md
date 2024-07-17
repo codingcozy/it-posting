@@ -258,13 +258,13 @@ ffplay tcp://RASPBERRY_PI_IP_HERE:1234 -vf "setpts=N/30" -fflags nobuffer -flags
 
 <div class="content-ad"></div>
 
-```sh
+```js
 mkdir mediamtx && cd mediamtx
 ```
 
 다음으로, GitHub에서 최신 링크를 찾아 WGET 명령어를 사용하여 다운로드합니다.
 
-```sh
+```js
 wget https://github.com/bluenviron/mediamtx/releases/download/v1.7.0/mediamtx_v1.7.0_linux_arm64v8.tar.gz
 ```
 

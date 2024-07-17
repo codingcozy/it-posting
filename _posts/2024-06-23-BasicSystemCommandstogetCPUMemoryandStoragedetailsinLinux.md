@@ -171,7 +171,7 @@ du -sm * 2>/dev/null
 
 <div class="content-ad"></div>
 
-```sh
+```js
 du -sm * 2>/dev/null | sort -n
 ```
 
@@ -179,7 +179,7 @@ du -sm * 2>/dev/null | sort -n
 
 더 큰 파일 세부 정보를 얻으려면 find 명령어와 du 명령어를 함께 사용할 수 있습니다.
 
-```sh
+```js
 find [STRING] -type f -exec du -m {} +;
 ```
 

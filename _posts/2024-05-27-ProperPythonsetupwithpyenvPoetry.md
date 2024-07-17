@@ -213,7 +213,7 @@ pyenv를 사용하면 로컬 또는 전역 파이썬 버전에 관해 항상 사
 
 <div class="content-ad"></div>
 
-```sh
+```js
 [~]$ pip install poetry
 [~]$ poetry -V
 Poetry (version 1.7.1)
@@ -221,7 +221,7 @@ Poetry (version 1.7.1)
 
 이 작업을 각 Python 버전마다 수행하십시오.
 
-```sh
+```js
 [~/testapp]$ poetry -V
 pyenv: poetry: command not found
 ```

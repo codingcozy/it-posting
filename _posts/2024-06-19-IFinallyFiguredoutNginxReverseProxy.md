@@ -187,7 +187,7 @@ Certbot이라는 블로그에서 무료로 자동 갱신되는 SSL 인증서를 
 
 <div class="content-ad"></div>
 
-```sh
+```js
 sudo snap install - classic certbot
 sudo ln -s /snap/bin/certbot /usr/bin/certbot
 sudo certbot - nginx

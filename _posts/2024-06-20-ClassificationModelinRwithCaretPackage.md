@@ -367,7 +367,7 @@ print(model_rf)
 
 <div class="content-ad"></div>
 
-```R
+```js
 predict_rf <- predict(model_rf, test_data)
 summary(predict_rf)
 
@@ -377,7 +377,7 @@ cf_rf <- confusionMatrix(predict_rf, test_data$fire_alarm)
 cf_rf
 ```
 
-```R
+```js
 yes   no 
 8952 3573 
 Confusion Matrix and Statistics
@@ -410,7 +410,7 @@ Prediction  yes   no
 
 Bagged CART 모델 로드하기
 
-```R
+```js
 # 분류 및 회귀 트리 (CART)
 model_treebag <- readRDS(here::here("finalModel_treebag.rds"))
 

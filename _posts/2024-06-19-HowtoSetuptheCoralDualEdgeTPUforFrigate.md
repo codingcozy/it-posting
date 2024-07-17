@@ -111,7 +111,7 @@ sudo systemctl status mosquitto
 
 MQTT 구성 파일을 편집합니다.
 
-```sh
+```js
 vim /etc/mosquitto/mosquitto.conf
 ```
 

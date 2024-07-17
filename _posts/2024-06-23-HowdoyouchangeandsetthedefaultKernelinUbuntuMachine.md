@@ -61,7 +61,7 @@ submenu 'Advanced options for Ubuntu' $menuentry_id_option 'gnulinux-advanced-9c
 
 <div class="content-ad"></div>
 
-```plaintext
+```js
 ubuntu@ip-172-31-11-86:~$ grep 4.15.0-136 /boot/grub/grub.cfg
 ```
 

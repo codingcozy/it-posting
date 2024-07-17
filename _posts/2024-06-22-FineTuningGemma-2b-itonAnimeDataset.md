@@ -102,7 +102,7 @@ tokenizer = AutoTokenizer.from_pretrained(model_id, add_eos_token=True)
 
 <div class="content-ad"></div>
 
-```py
+```js
 def generate_response(model, tokenizer, prompt, tokens=100):
     input_ids = tokenizer(prompt, return_tensors="pt")
     input_ids.to('cuda')
