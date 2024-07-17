@@ -3,13 +3,12 @@ title: "Kubernetes 컨테이너와 사라진 SIGTERM 신호들"
 description: ""
 coverImage: "/assets/img/2024-07-02-KubernetescontainersandthelostSIGTERMsignals_0.png"
 date: 2024-07-02 22:35
-ogImage: 
+ogImage:
   url: /assets/img/2024-07-02-KubernetescontainersandthelostSIGTERMsignals_0.png
 tag: Tech
 originalTitle: "Kubernetes: containers, and the “lost” SIGTERM signals"
 link: "https://medium.com/itnext/kubernetes-containers-and-the-lost-sigterm-signals-40007f35759a"
 ---
-
 
 <table> 태그를 Markdown 형식으로 변경해 주세요.
 
@@ -89,6 +88,7 @@ fastapi-app-59554cddc5-v7xq9:fastapi-app [2024-06-22 11:09:54 +0000] [1] [INFO] 
 Pod를 중지하는 과정은 어떻게 이루어질까요?
 
 이에 대해 더 자세히 적은 내용은 쿠버네티스: NGINX/PHP-FPM 우아한 종료 - 502 오류 제거에서 설명했으니, 여기에 매우 간단한 요약이 있습니다:
+
 - 우리는 kubectl delete pod을 실행합니다.
 - 해당 WorkerNode의 kubelet은 API 서버로부터 Pod를 중지하라는 명령을 받습니다.
 - kubelet은 Pod의 컨테이너에서 PID 1의 프로세스에 SIGTERM 신호를 보냅니다. 즉, 컨테이너가 생성될 때 시작된 첫 번째 프로세스입니다.
@@ -121,7 +121,6 @@ root           9  0.2  2.4 287668 49208 ?        Sl   11:14   0:04 /usr/local/bi
 이제 Pod에서 strace를 실행하여 수신하는 시그널을 확인해보겠습니다.
 
 <div class="content-ad"></div>
-
 
 ```js
 root@fastapi-app-6cb6b46c4b-9pd7r:/app# strace -p 1
@@ -220,7 +219,7 @@ Docker에서 컨테이너를 중지하는 과정 (또는 Containerd)은 사실 K
 그러니까 쿠버네티스에서 테스트한 도커 이미지와 동일한 이미지를 사용해 컨테이너를 시작합니다:
 
 ```js
-$ docker run --name test-app 492***148.dkr.ecr.us-east-1.amazonaws.com/fastapi-app-test:entry-2     
+$ docker run --name test-app 492***148.dkr.ecr.us-east-1.amazonaws.com/fastapi-app-test:entry-2
 [2024-06-22 14:15:03 +0000] [7] [INFO] Starting gunicorn 22.0.0
 [2024-06-22 14:15:03 +0000] [7] [INFO] Listening at: http://0.0.0.0:80 (7)
 [2024-06-22 14:15:03 +0000] [7] [INFO] Using worker: uvicorn.workers.UvicornWorker
@@ -265,7 +264,6 @@ cab29916f6ba   492***148.dkr.ecr.us-east-1.amazonaws.com/fastapi-app-test:entry-
 그러나 PID 1에 시그널을 무시하는 경우 어떻게 될까요?
 
 도커 케이블 문서에는 못 찾았지만, 두 가지 방법으로 컨테이너 프로세스를 종료할 수 있습니다:
-
 
 <div class="content-ad"></div>
 
@@ -335,7 +333,7 @@ $ docker inspect --format '{ .State.Pid }' test-app
 ps j -A를 실행하세요:
 
 ```js
-$ ps j -A      
+$ ps j -A
    PPID     PID    PGID     SID TTY        TPGID STAT   UID   TIME COMMAND
  ...
  629333  629353  629353  629353 ?             -1 Ss       0   0:00 /bin/sh -c gunicorn -w 1 -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:80 app:app
@@ -384,7 +382,7 @@ ENTRYPOINT gunicorn -w 1 -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:80 app:
 
 <div class="content-ad"></div>
 
-```Dockerfile
+```js
 FROM python:3.9-slim
 WORKDIR /app
 COPY requirements.txt .
