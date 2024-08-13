@@ -16,7 +16,7 @@ export default function Document() {
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
         <meta name="msapplication-config" content="/favicons/browserconfig.xml" />
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-D2TMEJ0LSX"></Script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-D2TMEJ0LSX"></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `window.dataLayer = window.dataLayer || [];
